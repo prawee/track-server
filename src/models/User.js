@@ -38,7 +38,7 @@ userSchema.pre('save', function() {
 })
 
 // hashing
-userSchema.methods.comparePassword = function(canidatePassword) {
+userSchema.methods.comparePassword = function comparePassword(canidatePassword) {
   const user = this
   return new Promise((resolve, reject) => {
     bcrypt.compare(canidatePassword, user.password, (err, isMatch) => {
