@@ -4,7 +4,7 @@
   "description": "testing make services with express",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
