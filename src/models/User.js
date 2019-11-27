@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
 
 // salting
 // don't use () => instead function() because use a keyword can be using 'this'
-userSchema.pre('save', function() {
+userSchema.pre('save', function(next) {
   const user = this
   if (!user.isModified('password')) {
     return next()
