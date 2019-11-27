@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema({
   }
 })
 
+// salting
 // don't use () => instead function() because use a keyword can be using 'this'
 userSchema.pre('save', function() {
   const user = this
@@ -35,5 +36,23 @@ userSchema.pre('save', function() {
     })
   })
 })
+
+// hashing
+userSchema.methods.comparePassword = function(canidatePassword) {
+  const user = this
+  return new Promise((resolve, reject) => {
+    bcrypt.compare(canidatePassword, user.password, (err, isMatch) => {
+      if (err) {
+        return reject(err)
+      }
+
+      if (!isMatch) {
+        return reject(false)
+      }
+
+      resolve(true)
+    })
+  })
+}
 
 mongoose.model('User', userSchema)
