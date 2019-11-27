@@ -38,7 +38,7 @@ app.listen(3000, () => {
 ## Running
 
 ```bash
-node ./src/index.js
+node ./src/index.js | node run dev
 ```
 
 ## Testing
