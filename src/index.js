@@ -6,7 +6,8 @@ const app = express()
 const mongoUri = `mongodb+srv://admin:p@ssw0rd@development-vt4z8.mongodb.net/test?retryWrites=true&w=majority`
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
-  useCreateIndex: true
+  useCreateIndex: true,
+  useUnifiedTopology: true
 })
 mongoose.connection.on('connected', () => {
   console.log('Connected to mongo instance')
