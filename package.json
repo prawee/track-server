@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/prawee/track-server/issues"
   },
-  "homepage": "https://github.com/prawee/track-server#readme"
+  "homepage": "https://github.com/prawee/track-server#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.12",
+    "nodemon": "^2.0.1"
+  }
 }
