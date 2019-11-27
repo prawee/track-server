@@ -1,0 +1,20 @@
+{
+  "name": "track-server",
+  "version": "1.0.0",
+  "description": "testing make services with express",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prawee/track-server.git"
+  },
+  "keywords": [],
+  "author": "Prawee Wongsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prawee/track-server/issues"
+  },
+  "homepage": "https://github.com/prawee/track-server#readme"
+}
