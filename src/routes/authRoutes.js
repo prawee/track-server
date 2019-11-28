@@ -17,7 +17,7 @@ router.post('/signup', async (req, res) => {
 
     res.send({ token })
   } catch (err) {
-    res.status(422).send(err.message)
+    res.status(422).send(err.response.data)
   }
   
 })
